@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Highscores</title>
+    <link rel="stylesheet" href="css/game.css">
+    <script src="js/test2.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="playfield">
+            <canvas id="canvasid"></canvas>
+            <h1 id="nameplayer"></h1>
+            <div class="cookiefield">
+                <div id="cookie"></div>
+                <div class="scorebanner">
+                    <div class="scorefield">
+                        <div id="score">0 cookies</div>
+                        <div id="persecond">Per second: 0.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="purchasables">
+                <h1>Store</h1>
+                <div class="upgrades">
+                    <button class="upgbutton" id="cursorup1" title="Price: 50. Doubles income from both your own and the automatic cursor." type="button">Cursor x2</button>
+                    <button class="upgbutton" id="cursorup2" title="Price: 200. Doubles income from both your own and the automatic cursor." type="button">Cursor x2</button>
+                    <button class="upgbutton" id="grandmaup1" title="Price: 1000. Doubles income from your grandmas." type="button">Grandma x2</button>
+                    <button class="upgbutton" id="farmup1" type="button">Farm x2</button>
+                </div>
+
+                <div class="automatics">
+                    <article class="box" id="curbox">
+                        <button class="breakout-button" title="A cursor that autoclicks for you for 0.1 cookies per second." id="addcursor" hidden>
+                            <h1>Cursor</h1>
+                        </button>
+                        <p class="amount" id="curamount">0</p>
+                        <p class="price" id="curprice">Price: 10</p>
+                        <p class="math" id="curmath">Total cps: 0.0</p>
+                    </article>
+                    <article class="box" id="grabox">
+                        <button class="breakout-button" title="Grandma that bakes cookies for you for 1 cookies per second." id="addgrandma" hidden>
+                            <h1>Grandma</h1>
+                        </button>
+                        <p class="amount" id="graamount">0</p>
+                        <p class="price" id="graprice">Price: 100</p>
+                        <p class="math" id="gramath">Total cps: 0.0</p>
+                    </article>
+                    <article class="box" id="farbox">
+                        <button class="breakout-button" title="A cookie farm that produces cookies for you for 8 cookies per second." id="addfarm" hidden>
+                            <h1>Farm</h1>
+                        </button>
+                        <p class="amount" id="faramount">0</p>
+                        <p class="price" id="farprice">Price: 1100</p>
+                        <p class="math" id="farmath">Total cps: 0.0</p>
+                    </article>
+                    <article class="box" id="minebox">
+                        <button class="breakout-button" title="A cookie mine where u can mine 100 cookies per second." id="addmine" hidden>
+                            <h1>Mine</h1>
+                        </button>
+                        <p class="amount" id="mineamount">0</p>
+                        <p class="price" id="mineprice">Price: 12000</p>
+                        <p class="math" id="minemath">Total cps: 0.0</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+        </div>
+    </main>
+</body>
+
+</html>

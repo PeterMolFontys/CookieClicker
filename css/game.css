@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #2b809c;
+}
+
+#namefield {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: center;
+}
+
+#namefield p{
+    font-size: 42px;
+    color: white;
+    font-style: bold;
+    text-align: center;
+    margin-bottom: 5%;
+    font-family: arial;
+}
+
+#namefield input[type=text], select{
+    width: 100%;
+    font-size: 24px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#namefield input[type=image], select{
+    position: absolute;
+    top:66%;
+    width:auto;
+    height:30px;
+    right:5px;
+    z-index: 2;
+}
+
+#playfield {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #2b809c;
+    overflow: hidden;
+    color:white;
+    font-size:18px;
+    font-family: arial;
+}
+
+#nameplayer{
+    position: fixed;
+    padding-left: 10px;
+}
+
+#canvasid {
+    position: fixed;
+    padding:0;
+    margin:0;
+    
+}
+
+
+.cookiefield{
+    width:80vw;
+    height:100vh;
+}
+
+.scorebanner{
+    position: relative;
+    top:-28vh;
+    background: rgba(0, 0, 0, 0.4);
+    padding:10px;
+}
+
+.scorefield{
+    position: relative;
+    margin: 0 auto;
+    width: 20vw;
+    text-align: center;
+    font-size: 30px;
+    color:white;
+}
+
+
+#cookie {
+    position: relative;
+    top:50%;
+    transform: translate(-00%, -50%);
+    width:350px;
+    height:350px;
+    margin:0 auto;
+    border-radius: 50%;
+    background-color: sandybrown;
+    cursor: pointer;
+}
+
+.purchasables {
+    position: absolute;
+    background-color:darkslateblue;
+    right:0;
+    top:0;
+    height:100vh;
+    width:20vw;
+    z-index:2000;
+    padding-top:10vh;
+}
+
+.purchasables h1{
+    text-align: center;
+}
+
+.upgrades{
+    z-index: 2001;
+    height:3vw;
+    overflow: hidden;
+}
+
+.upgbutton{
+    display:none;
+    height:3vw;
+    width:3vw;
+    cursor: pointer;
+}
+
+#playfield .wave {
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:100px;
+    background: url(/wave.png);
+    background-size: 1000px 100px;
+}
+
+#playfield .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0;
+}
+
+#playfield .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom:-10px;
+}
+
+@keyframes animate{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x:1000px;
+    }
+}
+
+@keyframes animate2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x:1000px;
+    }
+}
+
+#highscorefield {
+    display: none;
+    font-family: arial;
+    color:white;
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2b809c;
+}
+
+.box {
+    color: #fff;
+    padding:5px;
+    max-width: 20vw;
+    height:10vh;
+    background: #252525;
+    position: relative;
+    box-shadow: none;
+    transition: background 100ms ease;
+}
+
+.box h1{
+    font-size:36px;
+}
+
+.box .amount{
+    position: relative;
+    float:right;
+    font-size:40px;
+    line-height: 10vh;
+    padding:0;
+    margin:0;
+    right:5px;
+    color:darkgray;
+}
+
+.box .price, .box .math{
+    padding:0;
+    margin:0;
+}
+
+[data-interactive]:hover,
+[data-interactive]:focus-within {
+  background: #111111;
+}
+
+.box > * + * {
+  margin-top: 1em;
+}
+
+
+.breakout-button {
+  background: transparent;
+  color: currentcolor;
+  transition: background 100ms ease;
+  position: static;
+    border:none;
+}
+
+.breakout-button,
+.breakout-button::before {
+  cursor: pointer;
+}
+
+.breakout-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.breakout-button:focus {
+  outline: none;
+}
+
+
+
+
+
+:not([data-interactive]) > .breakout-button::before {
+  display: none;
+}
+
+/* Presentational styles */
+
+
